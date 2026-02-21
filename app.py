@@ -16,6 +16,11 @@ def generate_palette(image, num_colors=5):
     colors = kmeans.cluster_centers_.astype(int)
     return colors
 
+@app.route('/', methods=['GET'])
+def hi():
+    return "Hello, go to /palette!"
+
+
 @app.route('/palette', methods=['POST'])
 def palette_endpoint():
     file = request.files['image']

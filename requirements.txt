@@ -1,3 +1,4 @@
 flask
 pillow
 scikit-learn
+gunicorn
